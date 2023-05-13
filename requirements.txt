@@ -1,0 +1,12 @@
+# Web base
+Flask==1.1.2
+Jinja2==2.11.2
+
+# Web Deploy uWSGI
+gunicorn==20.0.4
+
+# Tools
+ansi2html==1.5.2
+libarchive-c==2.9
+requests==2.25.1
+markdown==3.2.2

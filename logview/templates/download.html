@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Logs File List</title>
+        <style>th {text-align: left;}</style>
+    </head>
+    <body>
+        <h1>Logs File List</h1>
+        <pre>
+            <table cellpadding="0">
+                <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                {% for log in logsprop %}
+                <tr>
+                    <td><a href="{{ path }}/{{ log.url }}">{{ log.url }}</a></td>
+                    <td>{{ log.size }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </pre>
+    </body>
+</html>

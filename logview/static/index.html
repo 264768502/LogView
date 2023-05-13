@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log Online Viewer</title>
+        <meta charset="UTF-8">
+        <style>
+        body{
+            background: #f2f2f2;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .search {
+            width: 100%;
+            position: relative
+        }
+
+        .searchTerm {
+            float: left;
+            width: 85%;
+            border: 3px solid #00B4CC;
+            padding: 5px;
+            height: 40px;
+            border-radius: 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+
+        .searchTerm:focus{
+            color: #00B4CC;
+        }
+
+        .searchButton {
+            float: right;
+            width: 12%;
+            height: 55px;
+            border: 3px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap{
+            width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        footer{position:absolute;bottom:0;left:0;right:0;text-align: center;}
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="search">
+                <form action="log" method="get">
+                    <input type="text" class="searchTerm" name="url" placeholder="Input Log URL Here" autofocus>
+                    <button type="submit" class="searchButton">View</button>
+                </form>
+            </div>
+         </div>
+    <footer><font color="grey">Version: 1.5.2</font></footer>
+    </body>
+    <script type="text/javascript">
+        window.onload=function(){
+            if(document.readyState=="complete"){
+                document.getElementsByClassName("searchTerm").focus();
+            }
+        }
+    </script>
+</html>
